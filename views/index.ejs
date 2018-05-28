@@ -12,26 +12,29 @@
     <h1 class="page-title">Superhero Form</h1>
 
     <form action="/handle" method="post" class="superhero-form">
-      <label for="name">Your Name</label>
       <input type="text" name="name" id="name" placeholder="Your name">
 
       <p>Select your favorite superhero</p>
-      <label><input type="radio" name="superhero" value="iron man"> Iron Man</label>
-      <label><input type="radio" name="superhero" value="hulk"> Hulk</label>
-      <label><input type="radio" name="superhero" value="captain america"> Captain America</label>
-      <label><input type="radio" name="superhero" value="spiderman"> Spider-Man</label>
-      <label><input type="radio" name="superhero" value="batman"> Batman</label>
-      <label><input type="radio" name="superhero" value="punisher"> Punisher</label>
-      <label><input type="radio" name="superhero" value="deadpool"> Deadpool</label>
-      <label><input type="radio" name="superhero" value="other" checked> Other</label>
+      <label><input type="radio" name="superhero" value="Iron Man"> Iron Man</label>
+      <label><input type="radio" name="superhero" value="Hulk"> Hulk</label>
+      <label><input type="radio" name="superhero" value="Captain America"> Captain America</label>
+      <label><input type="radio" name="superhero" value="Spider-Man"> Spider-Man</label>
+      <label><input type="radio" name="superhero" value="Batman"> Batman</label>
+      <label><input type="radio" name="superhero" value="Punisher"> Punisher</label>
+      <label><input type="radio" name="superhero" value="Deadpool"> Deadpool</label>
+      <label><input type="radio" name="superhero" value="Other" checked> Other</label>
 
       <button type="submit">Send</button>
     </form>
 
-    <% if (locals.formData) { %>
-      <p>My name is <%= formData.name %>
-        and my favorite superhero is <%= formData.superhero %></p>
-    <% } %>
+    <div class="result">
+      <h2>Server Response</h2>
+      <% if (locals.formData) { %>
+        <p>Hi! My name is <%= formData.name %> and my favorite superhero is <%= formData.superhero %>.</p>
+      <% } else { %>
+        <p>Submit the form to see the response.</p>
+      <% } %>
+    </div>
   </div>
 </body>
 </html>

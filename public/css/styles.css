@@ -54,10 +54,10 @@ body {
   border: 0;
   border-bottom: 1px solid lightblue;
 }
-
+.superhero-form input[type=text]:hover,
 .superhero-form input[type=text]:focus {
   outline: 0;
-  border: 1px solid lightblue;
+  border-bottom: 1px solid darkcyan;
 }
 
 .superhero-form label {
@@ -76,6 +76,7 @@ body {
   cursor: pointer;
   background: darkslategrey;
   border: 0;
+  border: 1px solid lightblue;
   border-radius: 0.2em;
   color: #fff;
   transition: all 0.1s ease-out;
@@ -87,10 +88,20 @@ body {
 
 .superhero-form button[type=submit]:focus {
   outline: 0;
-  border: 1px solid lightblue;
+  border: 1px solid darkcyan;
 }
 
 ::selection {
   background: #454545;
   color: #fff;
+}
+
+
+.result {
+  border: 1px solid lightgray;
+  padding: 2em;
+  border-radius: 0.2em;
+  box-shadow: 0 0 30px rgba(0,0,0,0.5);
+  background: #fff;
+  margin-top: 2em;
 }
