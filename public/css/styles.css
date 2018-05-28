@@ -1,0 +1,96 @@
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  color: #454545;
+  font-weight: 100;
+  padding: 1em;
+  font-size: 100%;
+  /* image from: https://unsplash.com/photos/ydHrpfgJNPo */
+  /* Photo by Lena Orwig on Unsplash */
+  background: url('/images/lena-orwig-491551-unsplash.jpg') no-repeat center center;
+  background-size: cover;
+}
+
+.page-wrapper {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.page-title {
+  text-align: center;
+  color: #fff;
+  letter-spacing: 2px;
+  font-size: 3em;
+  font-weight: 100;
+  text-shadow: 0 0 5px rgba(0,0,0,1),
+               0 0 10px rgba(0,0,0,0.8);
+  text-transform: uppercase;
+}
+
+.superhero-form {
+  border: 1px solid lightgray;
+  padding: 2em;
+  border-radius: 0.2em;
+  box-shadow: 0 0 30px rgba(0,0,0,0.5);
+  background: #fff;
+}
+
+.superhero-form input[type=text] {
+  width: 100%;
+  font-size: 1em;
+  padding: 0.5em;
+  margin-bottom: 2em;
+  border: 0;
+  border-bottom: 1px solid lightblue;
+}
+
+.superhero-form input[type=text]:focus {
+  outline: 0;
+  border: 1px solid lightblue;
+}
+
+.superhero-form label {
+  display: block;
+  margin-bottom: 1em;
+}
+
+.superhero-form label:last-child {
+  margin-bottom: 0;
+}
+
+.superhero-form button[type=submit] {
+  width: 100%;
+  text-transform: uppercase;
+  padding: 1em;
+  cursor: pointer;
+  background: darkslategrey;
+  border: 0;
+  border-radius: 0.2em;
+  color: #fff;
+  transition: all 0.1s ease-out;
+}
+
+.superhero-form button[type=submit]:hover {
+  background: slategray;
+}
+
+.superhero-form button[type=submit]:focus {
+  outline: 0;
+  border: 1px solid lightblue;
+}
+
+::selection {
+  background: #454545;
+  color: #fff;
+}
