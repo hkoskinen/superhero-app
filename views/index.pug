@@ -1,7 +1,9 @@
 doctype html
 html
-  include partials/head.pug
+  include includes/head.pug
   body
     block content
 
-    include partials/navigation.pug
+    include includes/navigation.pug
+
+    h1 #{title}
