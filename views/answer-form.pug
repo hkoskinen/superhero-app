@@ -1,0 +1,54 @@
+extends layout.pug
+
+block content
+
+  .page-wrapper
+    h1.page-title Superhero Form
+
+    form(action='/answer-submit' method='post' class='superhero-form')
+      label(for='name') Name
+      input(type='text' name='name' id='name' placeholder='Your name')
+
+      p Select your favorite superhero
+
+      label
+        input(type='radio' name='superhero' value='Iron Man')
+        | Iron Man
+
+      label
+        input(type='radio' name='superhero' value='Hulk')
+        | Hulk
+
+      label
+        input(type='radio' name='superhero' value='Captain America')
+        | Captain America
+
+      label
+        input(type='radio' name='superhero' value='Wonder Woman')
+        | Wonder Woman
+
+      label
+        input(type='radio' name='superhero' value='Spider-Man')
+        | Spider-Man
+
+      label
+        input(type='radio' name='superhero' value='Batman')
+        | Batman
+
+      label
+        input(type='radio' name='superhero' value='Harley Quinn')
+        | Harley Quinn
+
+      label
+        input(type='radio' name='superhero' value='Punisher')
+        | Punisher
+
+      label
+        input(type='radio' name='superhero' value='Deadpool')
+        | Deadpool
+
+      label
+        input(type='radio' name='superhero' value='Other' checked)
+        | Other
+
+      button(type='submit') Send
