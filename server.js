@@ -1,13 +1,13 @@
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
-const mongoose = require('mongoose');
+
+const db = require('./db/db');
+
 const SuperHero = require('./models/superhero');
 
 const loginRouter = require('./routes/login');
 const indexRouter = require('./routes/index');
-
-mongoose.connect('mongodb://dev:dev@localhost/superhero');
 
 // set the view engine to pug
 app.set('view engine', 'pug');
@@ -24,9 +24,6 @@ app.use(bodyParser.urlencoded({extended: true}));
 // routers
 app.use('/', indexRouter);
 app.use('/login', loginRouter);
-
-
-
 
 
 app.post('/handle', (req, res) => {
