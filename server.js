@@ -4,16 +4,30 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const SuperHero = require('./models/superhero');
 
+const loginRouter = require('./routes/login');
+const indexRouter = require('./routes/index');
+
 mongoose.connect('mongodb://dev:dev@localhost/superhero');
 
+// set the view engine to pug
 app.set('view engine', 'pug');
+
+// tell app where the pug views are stored
 app.set('views', './views');
+
+// tell app where the static content (css, js, images) are served from
 app.use(express.static('public'));
+
+//
 app.use(bodyParser.urlencoded({extended: true}));
 
-app.get('/', (req, res) => {
-  res.render('index');
-});
+// routers
+app.use('/', indexRouter);
+app.use('/login', loginRouter);
+
+
+
+
 
 app.post('/handle', (req, res) => {
 /*
